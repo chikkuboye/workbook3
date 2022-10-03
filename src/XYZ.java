@@ -66,10 +66,10 @@ public class XYZ {
     public static void main(String[] args) {
         ArrayList<Integer> objName = new ArrayList();
         CollegeStudent clg1 = new CollegeStudent(1,88,4);
-        CollegeStudent clg2 = new CollegeStudent(2,75,2);
+        CollegeStudent clg2 = new CollegeStudent(2,75,5);
         SchoolStudent sch1 = new SchoolStudent(10,80,12);
-        SchoolStudent sch2 = new SchoolStudent(11,70,10);
-        SchoolStudent sch3 = new SchoolStudent(14,90,11);
+        SchoolStudent sch2 = new SchoolStudent(11,70,12);
+        SchoolStudent sch3 = new SchoolStudent(14,90,12);
 
         objName.add(clg1.roll_no);
         objName.add(clg1.percentage);
@@ -96,6 +96,7 @@ public class XYZ {
             if (objName.get(i) == clg1.roll_no)
             {
                 System.out.println("roll number belong to collage");
+                // System.out.println(clg1.roll_no);
                 if (objName.get(i+1) > 75 )
                 {
                     count = count + 1;
@@ -103,13 +104,37 @@ public class XYZ {
 
             } else if (objName.get(i) == clg2.roll_no) {
                 System.out.println("roll number belong to collage");
+                // System.out.println(clg2.roll_no);
                 if (objName.get(i+1) > 75)
                 {
                     count = count + 1;
                 }
 
             }
-            else {
+            else if (objName.get(i) == sch1.roll_no){
+                System.out.println("roll number belong to school");
+                // System.out.println(sch1.roll_no);
+                if(objName.get(i+1)>75)
+                {
+                    count = count +1;
+                }
+            } else if (objName.get(i) == sch2.roll_no) {
+                System.out.println("roll number belong to school");
+                // System.out.println(sch2.roll_no);
+                try
+                {
+                    if(objName.get(i+1)>75)
+                    {
+                        count = count +1;
+                    }
+                }
+                catch (IndexOutOfBoundsException e)
+                {
+                    System.out.println(e);
+                }
+            } else if (objName.get(i) == sch3.roll_no) {
+                System.out.println("roll number belong to school");
+                // System.out.println(sch3.roll_no);
                 if(objName.get(i+1)>75)
                 {
                     count = count +1;

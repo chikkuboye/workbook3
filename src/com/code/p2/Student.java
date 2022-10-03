@@ -12,7 +12,7 @@ class Faculty
 {
     int idNumOfFaculty;
     String department;
-    void facu()
+    public void facu()
     {
         System.out.println("faculty information in p2");
     }

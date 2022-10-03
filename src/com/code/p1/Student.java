@@ -3,7 +3,7 @@ package com.code.p1;
 public class Student {
     String nameOfStudent;
     int noOfStudent;
-    void stud()
+    public void stud()
     {
         System.out.println("Student information");
     }
